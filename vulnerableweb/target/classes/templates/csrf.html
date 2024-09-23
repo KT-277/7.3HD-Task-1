@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Attack</title>
+</head>
+<body>
+    <h1>Cross-Site Request Forgery (CSRF)</h1>
+    <form action="/csrf" method="post">
+        <label for="csrfInput">Enter CSRF input:</label>
+        <input type="text" id="csrfInput" name="csrfInput" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p th:text="${message}"></p>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
