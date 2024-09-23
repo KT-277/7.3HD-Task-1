@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Aggregation</title>
+</head>
+<body>
+    <h1>Data Aggregation Attack</h1>
+    <form action="/aggregate" method="post">
+        <label for="info1">Sensitive Info 1:</label>
+        <input type="text" id="info1" name="info1" required>
+        <label for="info2">Sensitive Info 2:</label>
+        <input type="text" id="info2" name="info2" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p th:text="${message}"></p>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
